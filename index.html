@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="css/theme-simple.css"/>
+  <!-- <link rel="stylesheet" href="css/sidebar-folder.min.css"/> -->
+  <!-- <link rel="stylesheet" href="css/sidebar.min.css"/> -->
+  <link rel="stylesheet" href="css/css/prism-coldark-cold.css"/>
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: 'NOTES',
+      logo: '',
+      repo: '',
+      //coverpage: true,        // 开启封面
+      loadSidebar: true,      // 自动加载侧边栏
+      loadNavbar: true,       // 开启导航栏
+      noEmoji: true,  // 禁用 emoji 解析
+      alias: {
+      '/.*/_sidebar.md': '/_sidebar.md',
+      },
+      // 自定义侧边栏后默认不会再生成目录，设置生成目录的最大层级（建议配置为2-4）
+      subMaxLevel: 4,
+      sidebarDisplayLevel: 1, // set sidebar display level
+      // 小屏设备下合并导航栏到侧边栏
+      mergeNavbar: true,
+      // 搜索
+      search: {
+        maxAge: 10000,
+        paths: 'auto',
+        noData: {
+          '/': '没有结果！'
+        },
+        placeholder: {
+          '/': '搜索'
+        },
+      },
+      // 文章更新日期
+      timeUpdater: {
+        text: ">Last Modify: {docsify-updated}",
+        formatUpdated: "{YYYY}/{MM}/{DD}",
+      },
+      // 字数统计
+      count:{
+        countable:true,
+        fontsize:'0.9em',
+        color:'rgb(90,90,90)',
+        language:'english'
+      }
+
+    };
+  </script>
+<script src="js/docsify-katex.js"></script>
+<script src="js/docsify.min.js"></script>
+<!-- 搜索 -->
+<script src="js/search.min.js"></script>
+<!--侧边栏折叠 -->
+<script src="js/docsify-sidebar-collapse.min.js"></script>
+<!-- 代码高亮 -->
+<script src="js/prism-c.js"></script>
+<script src="js/prism-cpp.js"></script>
+<script src="js/prism-css.js"></script>
+<script src="js/prism-javascript.js"></script>
+<script src="js/prism-matlab.js"></script>
+<script src="js/prism-python.js"></script>
+<script src="js/prism-xml-doc.js"></script>
+<script src="js/prism-yaml.min.js"></script>
+<!--文章日期 -->
+<script src="js/time-updater.js"></script>
+<!--字数统计 -->
+<script src="js/countable.js"></script>
+<!--离线模式 PWA -->
+<script>
+  if (typeof navigator.serviceWorker !== 'undefined') {
+    navigator.serviceWorker.register('sw.js')
+  }
+</script>
+
+</body>
+</html>
